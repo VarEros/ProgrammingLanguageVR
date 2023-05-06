@@ -1,0 +1,11 @@
+Model Information:
+* title:	Low Poly Ruby
+* source:	https://sketchfab.com/3d-models/low-poly-ruby-786187083f994954a1db1ed9392c12b8
+* author:	endrit (https://sketchfab.com/endrit)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Low Poly Ruby" (https://sketchfab.com/3d-models/low-poly-ruby-786187083f994954a1db1ed9392c12b8) by endrit (https://sketchfab.com/endrit) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -10,6 +10,7 @@
     <a-scene>
       <a-assets>
         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">  
+        <a-asset-item id="javaModel" src="/assets/java/scene.gltf"></a-asset-item>
       </a-assets>
 
       <a-text value="Welcome to your new room!" position="-1.5 4 -5" color="#000" scale="1.5 1.5 1.5"></a-text>
@@ -27,6 +28,9 @@
       <a-box position="1 1 -5" rotation="0 70 30" scale="0.9 0.9 0.9" color="#E91E63"
                   event-set__enter="_event: mouseenter; _target: #bg; color: #E91E63">
       </a-box>  
+
+      <!--Modelos 3D-->
+      <a-entity gltf-model="#javaModel"></a-entity>
       
       <a-entity laser-controls="hand: left"></a-entity>
       <a-entity laser-controls="hand: right"></a-entity>
