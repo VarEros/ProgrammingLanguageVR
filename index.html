@@ -16,6 +16,7 @@
         <a-asset-item id="phpModel" src="/assets/php/scene.gltf"></a-asset-item>
         <a-asset-item id="pythonModel" src="/assets/python/scene.gltf"></a-asset-item>
         <a-asset-item id="rubyModel" src="/assets/ruby/scene.gltf"></a-asset-item>
+        <a-asset-item id="css" src="/assets/css/css1.gltf"></a-asset-item>
       </a-assets>
 
       <a-text value="Welcome to your new room!" position="-1.5 4 -5" color="#000" scale="1.5 1.5 1.5"></a-text>
@@ -35,12 +36,23 @@
       </a-box>  
 
       <!--Modelos 3D-->
-      <a-entity gltf-model="#javaModel" position="-14 0 14" rotation="0 136.1347721230836 0"></a-entity>
-      <a-entity gltf-model="#cSharpModel" position="-7 1.908 14" rotation="0 180 0" scale="0.05 0.05 0.05"></a-entity>
+      <a-entity gltf-model="#javaModel" position="-14 0 14" rotation="0 136.1347721230836 0" cursor-raycaster
+      event-set__enter="_event: mouseenter; _target: #tooltip; visible: true"
+      event-set__leave="_event: mouseleave; _target: #tooltip; visible: false"></a-entity>
+      <a-entity gltf-model="#cSharpModel" position="-7 1.908 14" rotation="0 180 0" scale="0.05 0.05 0.05" cursor-raycaster
+      event-set__enter="_event: mouseenter; _target: #tooltip; visible: true"
+      event-set__leave="_event: mouseleave; _target: #tooltip; visible: false"></a-entity>
       <a-entity gltf-model="#cppModel" position="7 1.908 14" rotation="0 180 0" scale="0.05 0.05 0.05"></a-entity>  
       <a-entity gltf-model="#phpModel"" position="14 1.506 14" rotation="0 -139.97358935046012 0"></a-entity>
       <a-entity gltf-model="#pythonModel" position="-14 1.381 7" rotation="0 90 0" scale="0.04 0.04 0.025"></a-entity>
-      <a-entity gltf-model="#rubyModel" position="14 -0.5 7" rotation="0 -90 0" scale="1.5 1.5 1.5"></a-entity>    
+      <a-entity gltf-model="#rubyModel" position="14 -0.5 7" rotation="0 -90 0" scale="1.5 1.5 1.5"></a-entity>
+      <a-entity gltf-model="#css" position="14 0 -7" rotation="0 0 0" ></a-entity>
+
+      <a-entity id="tooltip" tooltip="Este es un mensaje de ejemplo" position="-9 0 14" visible="false">
+        <a-plane color="#333" height="0.3" width="1"></a-plane>
+        <a-text value="Tooltip" color="#FFF" align="center" position="0 0.1 0" scale="20 20 20"></a-text>
+      </a-entity>
+      
       <a-entity laser-controls="hand: left"></a-entity>
       <a-entity laser-controls="hand: right"></a-entity>
 
@@ -49,7 +61,7 @@
       <a-plane src="#groundTexture" rotation="-90 0 0" width="50" height="50"></a-plane>
 
       <a-camera>
-        <a-cursor></a-cursor>
+        <a-cursor color="#FF0000"></a-cursor>
       </a-camera>
     </a-scene>
   </body>
