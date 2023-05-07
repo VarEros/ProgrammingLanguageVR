@@ -28,22 +28,29 @@
       </a-entity>
 
       <!--Modelos 3D-->
-      <a-entity gltf-model="#javaModel" position="-8.687 0 6.646" rotation="0 136.1347721230836 0" cursor-raycaster
+      <a-entity gltf-model="#javaModel" position="-8.687 0 6.646" rotation="0 136.1347721230836 0"
       event-set__enter="_event: mouseenter; _target: #tooltip; visible: true"
       event-set__leave="_event: mouseleave; _target: #tooltip; visible: false"></a-entity>
+
       <a-entity gltf-model="#cSharpModel" position="-4 2 11.251" rotation="0 160.02 0" scale="0.05 0.05 0.05" cursor-raycaster
       event-set__enter="_event: mouseenter; _target: #tooltip; visible: true"
       event-set__leave="_event: mouseleave; _target: #tooltip; visible: false"></a-entity>
+
       <a-entity gltf-model="#cppModel" position="4 2 10.819" rotation="0 -160.02 0" scale="0.05 0.05 0.05"></a-entity>  
+
       <a-entity gltf-model="#phpModel" position="10.062 1.506 8.278" rotation="0 -127.827 0"></a-entity>
+
       <a-entity gltf-model="#pythonModel" position="-8.839 1.381 0.200" rotation="0 90 0" scale="0.04 0.04 0.04"></a-entity>
+
       <a-entity gltf-model="#rubyModel" position="12.119 -0.5 2.034" rotation="0 -90 0" scale="1.5 1.5 1.5"></a-entity>
+
       <a-entity gltf-model="#css" position="9.914 0 -3.034" rotation="0 -48.759 0"  scale="0.5 0.5 0.5"></a-entity>
+
       <a-entity gltf-model="#javascript" position="-5.330 0.053 -2.464" rotation="0 -50 0" scale="15 15 15"></a-entity>
 
-      <a-entity id="tooltip" tooltip="Este es un mensaje de ejemplo" position="-9 0 14" visible="false">
+      <a-entity id="tooltip" position="-9 0 14" rotation="0 180 0" visible="false">
         <a-plane color="#333" height="0.3" width="1"></a-plane>
-        <a-text value="Tooltip" color="#FFF" align="center" position="0 0.1 0" scale="20 20 20"></a-text>
+        <a-text value="Este es un mensaje de ejemplo" color="#FFF" align="center" position="0 0.1 0" scale="20 20 20"></a-text>
       </a-entity>
       
       <a-entity laser-controls="hand: left"></a-entity>
@@ -51,11 +58,15 @@
 
       <a-sky id="bg" color="#FFF" src="./assets/sky.jpg"></a-sky>
       
-      <a-plane src="#groundTexture" rotation="-90 0 0" width="50" height="50"></a-plane>
+      <a-plane src="#groundTexture" rotation="-90 0 0" width="50" height="50" light="type:ambient"></a-plane>
 
-      <a-camera>
-        <a-cursor color="#FF0000"></a-cursor>
-      </a-camera>
+      <a-entity light="type: spot; angle: 49.45" rotation="34.25 90 0.29" position="-5.834 0.89736 0"></a-entity>
+
+      <a-entity rotation="0 0 0">
+        <a-camera wasd-controls="acceleration:150" camera rotation="30 30 0">
+          <a-cursor color="#FF0000"></a-cursor>
+        </a-camera>
+      </a-entity>
     </a-scene>
   </body>
 </html>
