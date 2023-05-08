@@ -10,48 +10,129 @@
     <a-scene>
       <a-assets>
         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">  
-        <a-asset-item id="javaModel" src="/assets/java/scene.gltf"></a-asset-item>
-        <a-asset-item id="cSharpModel" src="/assets/cSharp/scene.gltf"></a-asset-item>
-        <a-asset-item id="cppModel" src="/assets/cpp/scene.gltf"></a-asset-item>
-        <a-asset-item id="phpModel" src="/assets/php/scene.gltf"></a-asset-item>
-        <a-asset-item id="pythonModel" src="/assets/python/scene.gltf"></a-asset-item>
-        <a-asset-item id="rubyModel" src="/assets/ruby/scene.gltf"></a-asset-item>
+        <a-asset-item id="java" src="/assets/java/scene.gltf"></a-asset-item>
+        <a-asset-item id="csharp" src="/assets/cSharp/scene.gltf"></a-asset-item>
+        <a-asset-item id="cpp" src="/assets/cpp/scene.gltf"></a-asset-item>
+        <a-asset-item id="php" src="/assets/php/scene.gltf"></a-asset-item>
+        <a-asset-item id="python" src="/assets/python/scene.gltf"></a-asset-item>
+        <a-asset-item id="html" src="/assets/html/html.gltf"></a-asset-item>
         <a-asset-item id="css" src="/assets/css/css1.gltf"></a-asset-item>
         <a-asset-item id="javascript" src="/assets/javascript/javascript.gltf"></a-asset-item>
       </a-assets>
 
       <!-- Textos -->
-      <a-entity id="welcome-text" visible="true" event-set__leave="_event: mouseleave; _target: #welcome-text; visible: false">
-        <a-plane material="transparent: true; vertexColors: face; blending: none; color: #ffffff; visible: false" geometry="height: 2.5; width: 5" position="0.76368 2.39366 -5" rotation="0 0 0"></a-plane>
-        <a-text value="Welcome to your new room!" position="-1.5 3 -5" color="#000" scale="1.5 1.5 1.5"></a-text>
-        <a-text value="Apply a new color on walls by hovering over the colored cubes." position="-1.5 2.5 -5" color="#000"></a-text>
+      <a-entity id="welcome-text" visible="true">
+        <a-text value="Lenguajes de Programacion - DAM2" position="-1.5 4 -5" color="#000" scale="1.5 1.5 1.5"></a-text>
+        <a-text value="Por: \n\n - Erick Gonzalez \n - Armando Meza \n - Riuske Nishime" position="-1.5 3 -5"
+          color="#000"></a-text>     
+        </a-plane>
+      </a-entity>
+
+      <a-entity id="javascript-text" visible="false" position="-8.08721 3.5 -4.8361" rotation="0 45 0" scale="1.5 1.5 1.5">
+        <a-text value="Javascript" position="0 1 0" color="#000" scale="1.5 1.5 1.5" text="align: center"></a-text>
+        <a-text value="Tipo: Interpretado
+        Características Principales: Utilizado en el lado del cliente y del servidor, Dinamico, Orientado a objetos
+        Aplicaciones: Desarrollo web, Aplicaciones moviles, Juegos
+        " position="" color="#000" text="anchor: center;"></a-text>     
+      </a-entity>
+
+      <a-entity id="python-text" visible="false" position="-9.026 4.081 -0.478" rotation="0 90 0" scale="1.5 1.5 1.5">
+        <a-text value="Python" position="0 1 0" color="#000" scale="1.5 1.5 1.5" text="align: center"></a-text>
+        <a-text value="Tipo: Interpretado
+        Características Principales: Facil de aprender y leer, Sintaxis clara y concisa, Extensa biblioteca estandar
+        Aplicaciones: Analisis de datos, Inteligencia artificial, Aplicaciones web
+        " position="" color="#000" text="anchor: center;"></a-text>     
+      </a-entity>
+
+      <a-entity id="java-text" visible="false" position="-8.578 3.527 6.141" rotation="0 125 0" scale="1.5 1.5 1.5">
+        <a-text value="Java" position="0 1 0" color="#000" scale="1.5 1.5 1.5" text="align: center"></a-text>
+        <a-text value="Tipo: Interpretado
+        Características Principales: Utilizado en el lado del cliente y del servidor, Dinamico, Orientado a objetos
+        Aplicaciones: Desarrollo web, Aplicaciones moviles, Juegos
+        " position="" color="#000" text="anchor: center;"></a-text>     
+      </a-entity>
+
+      <a-entity id="csharp-text" visible="false" position="-4.471 4.4 10.650" rotation="0 160 0" scale="1.5 1.5 1.5">
+        <a-text value="C#" position="0 1 0" color="#000" scale="1.5 1.5 1.5" text="align: center"></a-text>
+        <a-text value="Tipo: Compilado 
+        Características Principales: Orientado a objetos, Multiplataforma, Facil integracion con Windows
+        Aplicaciones: 
+        " position="" color="#000" text="anchor: center;"></a-text>     
+      </a-entity>
+
+      <a-entity id="cpp-text" visible="false" position="3.577 4.882 10.128" rotation="0 -160 0" scale="1.5 1.5 1.5">
+        <a-text value="C++" position="0 1 0" color="#000" scale="1.5 1.5 1.5" text="align: center"></a-text>
+        <a-text value="Tipo: Compliado
+        Características Principales: Lenguaje de bajo nivel, Alto rendimiento, Orientado a objetos
+        Aplicaciones: Sistemas operativos, Videojuegos, Software de Sistemas.
+        " position="" color="#000" text="anchor: center;"></a-text>     
+      </a-entity>
+
+      <a-entity id="php-text" visible="false" position="9.125 4.318 7.270" rotation="0 -127 0" scale="1.5 1.5 1.5">
+        <a-text value="PHP" position="0 1 0" color="#000" scale="1.5 1.5 1.5" text="align: center"></a-text>
+        <a-text value="Tipo: Interpretado
+        Características Principales: Facil de aprender, Ampliamente utilizado en la web, Orientado a objetos
+        Aplicaciones: Desarrollo web, Comercio electronico, Gestion de contenido
+        " position="" color="#000" text="anchor: center;"></a-text>     
+      </a-entity>
+
+      <a-entity id="html-text" visible="false" position="10.495 4 2.5" rotation="0 -90 0" scale="1.5 1.5 1.5">
+        <a-text value="HTML" position="0 1 0" color="#000" scale="1.5 1.5 1.5" text="align: center"></a-text>
+        <a-text value="Tipo: Interpretado 
+        Características Principales: Lenguaje de marcado para la presentacion visual de paginas web
+        Aplicaciones: Desarrollo web
+        " position="" color="#000" text="anchor: center;"></a-text>     
+      </a-entity>
+
+      <a-entity id="css-text" visible="false" position="10 4 -3" rotation="0 -48 0" scale="1.5 1.5 1.5">
+        <a-text value="CSS" position="0 1 0" color="#000" scale="1.5 1.5 1.5" text="align: center"></a-text>
+        <a-text value="Tipo: Interpretado 
+        Características Principales: Lenguaje de estilo para la presentacion visual de paginas web
+        Aplicaciones: Desarrollo web
+        " position="" color="#000" text="anchor: center;"></a-text>     
       </a-entity>
 
       <!--Modelos 3D-->
-      <a-entity gltf-model="#javaModel" position="-8.687 0 6.646" rotation="0 136.1347721230836 0"
-      event-set__enter="_event: mouseenter; _target: #tooltip; visible: true"
-      event-set__leave="_event: mouseleave; _target: #tooltip; visible: false"></a-entity>
+      <a-entity gltf-model="#javascript" position="-5.330 0.053 -2.464" rotation="0 -50 0" scale="15 15 15"
+      event-set__mouseenter="_target: #javascript-text; visible: true"
+      event-set__mouseleave="_target: #javascript-text; visible: false"
+      ></a-entity>
 
-      <a-entity gltf-model="#cSharpModel" position="-4 2 11.251" rotation="0 160.02 0" scale="0.05 0.05 0.05" cursor-raycaster
-      event-set__enter="_event: mouseenter; _target: #tooltip; visible: true"
-      event-set__leave="_event: mouseleave; _target: #tooltip; visible: false"></a-entity>
+      <a-entity gltf-model="#python" position="-8.839 1.381 0.200" rotation="0 90 0" scale="0.04 0.04 0.04"
+      event-set__mouseenter="_target: #python-text; visible: true"
+      event-set__mouseleave="_target: #python-text; visible: false"
+      ></a-entity>
 
-      <a-entity gltf-model="#cppModel" position="4 2 10.819" rotation="0 -160.02 0" scale="0.05 0.05 0.05"></a-entity>  
+      <a-entity gltf-model="#java" position="-8.687 0 6.646" rotation="0 136.1347721230836 0"
+      event-set__mouseenter="_target: #java-text; visible: true"
+      event-set__mouseleave="_target: #java-text; visible: false"
+      ></a-entity>
 
-      <a-entity gltf-model="#phpModel" position="10.062 1.506 8.278" rotation="0 -127.827 0"></a-entity>
+      <a-entity gltf-model="#csharp" position="-4 2 11.251" rotation="0 160.02 0" scale="0.05 0.05 0.05"
+      event-set__mouseenter="_target: #csharp-text; visible: true"
+      event-set__mouseleave="_target: #csharp-text; visible: false"
+      ></a-entity>
 
-      <a-entity gltf-model="#pythonModel" position="-8.839 1.381 0.200" rotation="0 90 0" scale="0.04 0.04 0.04"></a-entity>
+      <a-entity gltf-model="#cpp" position="4 2 10.819" rotation="0 -160.02 0" scale="0.05 0.05 0.05"
+      event-set__mouseenter="_target: #cpp-text; visible: true"
+      event-set__mouseleave="_target: #cpp-text; visible: false"
+      ></a-entity>  
 
-      <a-entity gltf-model="#rubyModel" position="12.119 -0.5 2.034" rotation="0 -90 0" scale="1.5 1.5 1.5"></a-entity>
+      <a-entity gltf-model="#php" position="10.062 1.506 8.278" rotation="0 -127.827 0"
+      event-set__mouseenter="_target: #php-text; visible: true"
+      event-set__mouseleave="_target: #php-text; visible: false"
+      ></a-entity>
 
-      <a-entity gltf-model="#css" position="9.914 0 -3.034" rotation="0 -48.759 0"  scale="0.5 0.5 0.5"></a-entity>
 
-      <a-entity gltf-model="#javascript" position="-5.330 0.053 -2.464" rotation="0 -50 0" scale="15 15 15"></a-entity>
+      <a-entity gltf-model="#html" position="12.119 0 2.034" rotation="0 -90 0" scale="0.4 0.4 0.4"
+      event-set__mouseenter="_target: #html-text; visible: true"
+      event-set__mouseleave="_target: #html-text; visible: false"
+      ></a-entity>
 
-      <a-entity id="tooltip" position="-9 0 14" rotation="0 180 0" visible="false">
-        <a-plane color="#333" height="0.3" width="1"></a-plane>
-        <a-text value="Este es un mensaje de ejemplo" color="#FFF" align="center" position="0 0.1 0" scale="20 20 20"></a-text>
-      </a-entity>
+      <a-entity gltf-model="#css" position="9.914 0 -3.034" rotation="0 -48.759 0"  scale="0.4 0.4 0.4"
+      event-set__mouseenter="_target: #css-text; visible: true"
+      event-set__mouseleave="_target: #css-text; visible: false"
+      ></a-entity>
       
       <a-entity laser-controls="hand: left"></a-entity>
       <a-entity laser-controls="hand: right"></a-entity>
